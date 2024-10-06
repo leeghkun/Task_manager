@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Task Manager App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Task Manager</h1>
+            <button class="add-task-btn" onclick="toggleForm()">+ Add Task</button>
+        </header>
+
+        <!-- Add/Edit Task Form -->
+        <div id="task-form" class="add-task-form hidden">
+            <label for="task-title">Task Title</label>
+            <input type="text" id="task-title" placeholder="Enter task title" required>
+
+            <label for="category">Category</label>
+            <select id="category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+            </select>
+
+            <label for="due-date">Due Date</label>
+            <input type="date" id="due-date" required>
+
+            <label for="reminder">Reminder</label>
+            <input type="time" id="reminder">
+
+            <button type="button" class="submit-btn" onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Task List Section -->
+        <div class="task-list">
+            <h2>Pending Tasks</h2>
+            <div id="pending-tasks"></div>
+        </div>
+
+        <!-- Completed Tasks Section -->
+        <div class="completed-tasks">
+            <h2>Completed Tasks</h2>
+            <div id="completed-tasks"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
